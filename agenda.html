@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="agenda.css">
+    <title>Agenda</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="hamburger-icon" onclick="toggleNavbar()">
+            <i class="material-icons">menu</i>
+        </div>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="index.html">Faturamentos</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="#">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <div class="agenda">
+        <label for="months">Escolha o mês:</label>
+        <select id="months">
+            <option value="jan">Janeiro</option>
+            <option value="feb">Fevereiro</option>
+            <option value="mar">Março</option>
+            <option value="apr">Abril</option>
+            <option value="may">Maio</option>
+            <option value="jun">Junho</option>
+            <option value="jul">Julho</option>
+            <option value="aug">Agosto</option>
+            <option value="sep">Setembro</option>
+            <option value="oct">Outubro</option>
+            <option value="nov">Novembro</option>
+            <option value="dec">Dezembro</option>
+
+        </select>
+
+        <div id="calendar" class="calendar">
+            <!-- O calendário será gerado dinamicamente com JavaScript -->
+        </div>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tarefas</h2>
+            <hr>
+            <div class="add-task-form">
+                <label for="taskInput">Tarefa:</label>
+                <input type="text" id="taskInput" placeholder="Digite a tarefa" required>
+
+                <label for="timeInput">Horário:</label>
+                <input type="text" id="timeInput" placeholder="Digite o horário" required>
+
+                <button id="addTaskBtn">Adicionar Tarefa</button>
+            </div>
+
+            <div id="tasksContainer" class="tasks-container"></div>
+        </div>
+    </div>
+
+    <script src="agenda.js"></script>
+</body>
+
+</html>

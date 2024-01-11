@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página Responsiva</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="hamburger-icon" onclick="toggleNavbar()">
+            <i class="material-icons">menu</i>
+        </div>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="index.html">Faturamentos</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+        <div class="saldo-container">
+            <span class="saldo">Saldo: R$ 0.00</span>
+        </div>
+    </nav>
+
+    <!-- Container Central -->
+    <div class="central-container">
+        <!-- Formulário Container -->
+        <div class="form-container">
+            <form id="expenseForm">
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo">
+                    <option value="entrada">Entrada</option>
+                    <option value="saida">Saída</option>
+                </select>
+
+                <label for="motivo">Motivo:</label>
+                <input type="text" id="motivo" name="motivo" required>
+
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" name="valor" required>
+
+                <button type="button" onclick="adicionarExtrato()">Armazenar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Extrato Container -->
+    <h2>Extrato</h2>
+    <div class="extrato-container" id="extratoContainer">
+        <!-- O conteúdo do extrato será preenchido dinamicamente com JavaScript -->
+    </div>
+    <button class="storage" onclick="confirmarLimpeza()">Limpar Dados</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
